@@ -41,8 +41,8 @@ const switchPlayer = function () {
 rollDiceBtn.addEventListener('click', function () {
     if (isGameStarted) {
         let diceRoll = randomDiceRoll();
-        dice.style.display = 'block';
         dice.src = `dice-${diceRoll}.png`;
+        dice.style.display = 'block';
         if (diceRoll != 1) {
             currentScore += diceRoll;
             document.getElementById(`current--${activePlayer}`).textContent = currentScore;
