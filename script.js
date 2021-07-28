@@ -17,7 +17,6 @@ const init = function () {
     activePlayer = 0;
     scores = [0, 0];
     isGameStarted = true;
-    dice.style.display = 'block';
     player0.classList.remove('player--winner');
     player1.classList.remove('player--winner');
     player0.classList.add('player--active');
@@ -42,7 +41,7 @@ const switchPlayer = function () {
 rollDiceBtn.addEventListener('click', function () {
     if (isGameStarted) {
         let diceRoll = randomDiceRoll();
-
+        dice.style.display = 'block';
         dice.src = `dice-${diceRoll}.png`;
         if (diceRoll != 1) {
             currentScore += diceRoll;
